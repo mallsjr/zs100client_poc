@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.fedex.dock.zs100client_poc">
 
-    <uses-permission android:name="com.awtx.weighingservice.REQUEST_DATA" />
+    <uses-permission android:name="com.awt.weighingservice.REQUEST_DATA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -25,7 +25,7 @@
 
     <queries>
         <intent>
-            <action android:name="com.awtx.zs100service.WeighingService" />
+            <action android:name="com.awt.zs100service.WeighingService" />
         </intent>
     </queries>
 

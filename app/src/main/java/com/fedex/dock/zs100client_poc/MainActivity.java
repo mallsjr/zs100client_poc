@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void getScaleInformation(View view) {
         Log.i(TAG, "getting scale information");
-        Message message = Message.obtain(null, 90);
+        Message message = Message.obtain(null, 70);
         message.replyTo = localmessenger;
         try {
             messenger.send(message);
@@ -92,9 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void handleMessage(@NonNull Message msg) {
-            if (msg.what == 100) {
-                res = msg.getData().getString("GetScaleInfo_Key");
-                Toast.makeText(applicationContext, res, Toast.LENGTH_LONG).show();
+            Log.i(TAG, "In handle message");
+            if (msg.what == 80) {
+                res = msg.getData().getString("GetWeight_Key");
+                Log.i(TAG, "Data: " + res);
             } else {
                 super.handleMessage(msg);
             }
